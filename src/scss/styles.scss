@@ -1,8 +1,8 @@
 @use "./maps/font-scale" as *;
 @import "./utilities/gradients";
 @import "./maps/index";
-
-// Responsive font-sizes: https://dev.to/dostonnabotov/responsive-font-sizes-with-sass-maps-and-each-2ge9
+@import "./components/index";
+// Responsive font-sizes: https://dev.to/dostonnabotov/responsive-font-sizes-with-sass-maps-and-each-2ge9:
 :root {
   @each $screen-size, $sizes in $font-scale {
     @if $screen-size == sm {
@@ -41,4 +41,11 @@ h2 {
 
 h3 {
   font-size: var(--fs-#{500});
+}
+
+nav {
+  a {
+    font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+    font-size: var(--fs-#{500});
+  }
 }

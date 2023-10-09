@@ -1,3 +1,44 @@
+.display-flex, nav ul, header {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  background-color: #010612;
+}
+
+nav {
+  height: 80px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  background-color: #d4af35;
+  background-image: linear-gradient(180deg, rgba(212, 175, 53, 0.8) 0%, rgba(168, 137, 36, 0.8) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-style: italic;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #d4af35;
+  background-image: linear-gradient(180deg, rgb(212, 175, 53) 0%, rgb(168, 137, 36) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
 :root {
   --fs-300: 0.8rem;
   --fs-400: 1rem;
@@ -36,5 +77,10 @@ h2 {
 }
 
 h3 {
+  font-size: var(--fs-500);
+}
+
+nav a {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
   font-size: var(--fs-500);
 }/*# sourceMappingURL=styles.css.map */

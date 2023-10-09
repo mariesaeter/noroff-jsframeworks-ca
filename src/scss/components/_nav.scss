@@ -1,0 +1,27 @@
+@import "../utilities/";
+@import "../maps/variables";
+
+header {
+  @extend .display-flex;
+  width: 100%;
+  background-color: getColor(main-black);
+}
+nav {
+  height: 80px;
+
+  ul {
+    @extend .display-flex;
+    list-style: none;
+
+    li {
+      a {
+        @include gradientText(primary-yellow, gradient-yellow-light);
+        font-style: italic;
+        text-decoration: none;
+        &:hover {
+          @include gradientText(primary-yellow, gradient-yellow);
+        }
+      }
+    }
+  }
+}
