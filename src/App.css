@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  color: linear-gradient(180deg, rgb(212, 175, 53) 0%, rgb(168, 137, 36) 100%);
+}

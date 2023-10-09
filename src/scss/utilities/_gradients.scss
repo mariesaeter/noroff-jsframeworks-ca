@@ -1,0 +1,12 @@
+@import "../maps/variables";
+
+@mixin gradient-text($primary, $gradient) {
+  background-color: getColor($primary);
+  background-image: getColor($gradient);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

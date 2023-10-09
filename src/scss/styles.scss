@@ -1,0 +1,44 @@
+@use "./maps/font-scale" as *;
+@import "./utilities/gradients";
+@import "./maps/index";
+
+// Responsive font-sizes: https://dev.to/dostonnabotov/responsive-font-sizes-with-sass-maps-and-each-2ge9
+:root {
+  @each $screen-size, $sizes in $font-scale {
+    @if $screen-size == sm {
+      @each $key, $value in $sizes {
+        --fs-#{$key}: #{$value};
+      }
+    } @else {
+      @media (min-width: 50em) {
+        @each $key, $value in $sizes {
+          --fs-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+body {
+  font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  font-size: var(--fs-#{400});
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  color: getColor(primary-blue);
+}
+
+h1 {
+  font-size: var(--fs-#{700});
+}
+
+h2 {
+  font-size: var(--fs-#{600});
+}
+
+h3 {
+  font-size: var(--fs-#{500});
+}

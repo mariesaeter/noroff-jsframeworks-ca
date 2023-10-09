@@ -1,0 +1,32 @@
+$colors: (
+  "black": #010612,
+  "primary-yellow": #d4af35,
+  "gradient-yellow-light":
+    linear-gradient(
+      180deg,
+      rgba(212, 175, 53, 0.8) 0%,
+      rgba(168, 137, 36, 0.8) 100%
+    ),
+  "gradient-yellow":
+    linear-gradient(
+      180deg,
+      rgba(212, 175, 53, 1) 0%,
+      rgba(168, 137, 36, 1) 100%
+    ),
+  "primary-blue": #020d27,
+  "gradient-blue-light":
+    linear-gradient(180deg, rgba(33, 45, 68, 0.8) 0%, rgba(2, 13, 39, 0.8) 100%),
+  "gradient-blue":
+    linear-gradient(180deg, rgba(33, 45, 68, 1) 0%, rgba(2, 13, 39, 1) 100%),
+  "body-gradient":
+    linear-gradient(
+      180deg,
+      rgba(252, 251, 247, 1) 0%,
+      rgba(252, 251, 247, 1) 71%,
+      rgba(247, 241, 222, 1) 100%
+    ),
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
