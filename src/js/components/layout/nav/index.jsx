@@ -11,10 +11,14 @@ export function Nav() {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/search">Search icon</Link>
+          <Link to="/search">
+            <img src="/icons/Search.png" alt="Search" />
+          </Link>
         </li>
         <li>
-          <Link to="/cart">Cart icon</Link>
+          <Link to="/cart">
+            <img src="/icons/shopping-cart.png" alt="Shopping cart" />
+          </Link>
         </li>
       </ul>
     </nav>

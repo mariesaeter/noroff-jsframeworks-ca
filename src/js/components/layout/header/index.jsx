@@ -3,7 +3,7 @@ import { Nav } from "../nav";
 
 export function Header() {
   return (
-    <header>
+    <header className="p-l-20">
       <Link to="/">
         <img src="/logo.png" alt="trendtrove logo" />
       </Link>
