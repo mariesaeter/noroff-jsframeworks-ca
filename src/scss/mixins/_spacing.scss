@@ -1,0 +1,35 @@
+// $paddings: (
+//   p1: 0.277em,
+//   p2: 0.555em,
+//   p3: 1.111em,
+// );
+
+// With heavy inspiration from: https://medium.com/@jerrythimothy/margins-paddings-sass-mixin-16460c32507f
+
+$max: 30;
+$offset: 5;
+$unit: "px";
+
+@mixin spacing-classes($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} {
+      #{$styleName}: #{$i + $unit};
+    }
+    $i: $i + $offset;
+  }
+}
+
+// Padding
+@include spacing-classes(".p-", "padding");
+@include spacing-classes(".p-l-", "padding-left");
+@include spacing-classes(".p-t-", "padding-top");
+@include spacing-classes(".p-r-", "padding-right");
+@include spacing-classes(".p-b-", "padding-bottom");
+
+// Margin
+@include spacing-classes(".m-", "margin");
+@include spacing-classes(".m-l-", "margin-left");
+@include spacing-classes(".m-t-", "margin-top");
+@include spacing-classes(".m-r-", "margin-right");
+@include spacing-classes(".m-b-", "margin-bottom");

@@ -2,7 +2,16 @@
 @import "./utilities/gradients";
 @import "./maps/index";
 @import "./components/index";
+@import "./mixins/index";
 // Responsive font-sizes: https://dev.to/dostonnabotov/responsive-font-sizes-with-sass-maps-and-each-2ge9:
+html {
+  font-size: 18px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   @each $screen-size, $sizes in $font-scale {
     @if $screen-size == sm {
