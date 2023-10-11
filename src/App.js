@@ -6,6 +6,7 @@ import {
   Contact,
   Home,
   Layout,
+  Product,
   RouteNotFound,
   Search,
 } from "./js/components/layout";
@@ -19,11 +20,10 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="search" element={<Search />} />
           <Route path="cart" element={<Cart />} />
+          <Route path=":id" element={<Product />} />
           <Route path="*" element={<RouteNotFound />} />
         </Route>
       </Routes>
-      <h1>Title</h1>
-      <p>This is some body text</p>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export function rating(rating) {
       </>
     );
   }
-  if (rating === 4.5) {
+  if (rating > 4 && rating < 5) {
     return (
       <>
         {fullStar}

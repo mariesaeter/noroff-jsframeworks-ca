@@ -5,7 +5,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.product-card-img {
+.product-img {
   object-fit: cover;
   width: 100%;
 }
@@ -15,7 +15,8 @@
   font-weight: 500;
 }
 
-.product-card-price {
+.product-price {
+  text-align: center;
   p:nth-child(1) {
     color: getColor(gray-text);
     text-decoration: line-through;
@@ -37,6 +38,12 @@
   @extend .product-card-general;
   text-align: center;
   &-img {
+    min-height: 150px;
     max-height: 150px;
   }
+}
+
+.product-page .product-img {
+  min-height: 300px;
+  max-height: 300px;
 }

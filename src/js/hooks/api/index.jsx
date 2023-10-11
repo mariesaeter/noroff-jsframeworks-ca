@@ -20,7 +20,7 @@ export function useApi(url) {
         setIsLoading(false);
       }
     }
-    getProducts();
+    getProducts(url);
   }, [url]);
   return { products, isLoading, isError };
 }
