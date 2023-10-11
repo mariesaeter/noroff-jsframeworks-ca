@@ -1,5 +1,5 @@
 @use "./maps/font-scale" as *;
-@import "./utilities/gradients";
+@import "./utilities/";
 @import "./maps/index";
 @import "./components/index";
 @import "./mixins/index";
@@ -10,6 +10,7 @@ html {
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
