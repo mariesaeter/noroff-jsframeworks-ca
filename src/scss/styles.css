@@ -18,6 +18,11 @@
   align-items: center;
 }
 
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .display-flex, nav ul, header {
   display: flex;
   align-items: center;
@@ -36,6 +41,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 header {
@@ -104,6 +114,11 @@ nav ul li a:hover {
   align-items: center;
 }
 
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 header {
   justify-content: space-between;
 }
@@ -126,6 +141,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero-banner {
@@ -165,6 +185,68 @@ header {
   content: "";
   min-height: 30px;
   width: 100%;
+}
+
+.display-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-grid, .products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-card-general, .product-card {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.product-card-title {
+  font-size: var(--fs-400);
+  font-weight: 500;
+}
+
+.product-card-price p:nth-child(1) {
+  color: #71747b;
+  text-decoration: line-through;
+}
+
+.product-rating img {
+  width: 15px;
+}
+
+.products-container {
+  gap: 10px 10px;
+}
+
+.product-card {
+  text-align: center;
+}
+
+.product-card-img {
+  max-height: 150px;
 }
 
 .p-0 {
@@ -455,6 +537,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 :root {
@@ -475,6 +558,10 @@ html {
 }
 
 body {
+  background-color: #fcfbf7;
+  background-image: linear-gradient(180deg, rgb(252, 251, 247) 0%, rgb(252, 251, 247) 71%, rgb(247, 241, 222) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
   font-size: var(--fs-400);
 }
@@ -488,6 +575,9 @@ h3 {
 
 h1 {
   font-size: var(--fs-700);
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 h2 {

@@ -27,6 +27,7 @@ $colors: (
       rgba(252, 251, 247, 1) 71%,
       rgba(247, 241, 222, 1) 100%
     ),
+  "gray-text": #71747b,
 );
 
 @function getColor($color) {

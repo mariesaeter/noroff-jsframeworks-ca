@@ -1,0 +1,42 @@
+@import "../utilities/";
+
+.product-card-general {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-card-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-card-title {
+  font-size: var(--fs-400);
+  font-weight: 500;
+}
+
+.product-card-price {
+  p:nth-child(1) {
+    color: getColor(gray-text);
+    text-decoration: line-through;
+  }
+}
+
+.product-rating {
+  img {
+    width: 15px;
+  }
+}
+
+.products-container {
+  @extend .display-grid;
+  gap: 10px 10px;
+}
+
+.product-card {
+  @extend .product-card-general;
+  text-align: center;
+  &-img {
+    max-height: 150px;
+  }
+}
