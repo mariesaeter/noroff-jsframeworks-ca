@@ -30,6 +30,14 @@ export function Product() {
           <p>{products.price} kr</p>
           <p>{products.discountedPrice} kr</p>
         </div>
+        <button className="primary-button">
+          Add to cart
+          <img
+            src="/icons/add-to-cart.png"
+            alt="add to cart"
+            className="icon-width-32 m-l-5"
+          />
+        </button>
         <div>
           <h2>Reviews</h2>
           <span className="product-rating">{rating(products.rating)}</span>

@@ -339,6 +339,58 @@ header {
   color: #71747b;
 }
 
+.display-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-flex, button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+button {
+  padding: 10px 40px;
+  border: none;
+  font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  font-size: var(--fs-500);
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #020d27;
+  background-image: linear-gradient(180deg, rgb(33, 45, 68) 0%, rgb(2, 13, 39) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  color: #fcfbf7;
+}
+
+.primary-button:hover {
+  background-color: #212d44;
+  background-image: linear-gradient(180deg, rgb(53, 73, 110) 0%, rgb(33, 45, 68) 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -681,4 +733,13 @@ h3 {
 nav a {
   font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
   font-size: var(--fs-500);
+}
+
+a {
+  text-decoration: none;
+  color: #010612;
+}
+
+.icon-width-32 {
+  width: 32px;
 }/*# sourceMappingURL=styles.css.map */

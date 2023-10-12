@@ -1,0 +1,26 @@
+@import "../utilities/";
+@import "../maps/";
+
+button {
+  @extend .center-flex;
+  padding: 10px 40px;
+  border: none;
+  font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  font-size: var(--fs-500);
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.primary-button {
+  //   background: getColor(primary-blue);
+  @include gradientBackground(primary-blue, gradient-blue);
+  color: getColor(body);
+
+  &:hover {
+    // background: getColor(secondary-blue);
+    @include gradientBackground(secondary-blue, gradient-blue-light);
+  }
+}
