@@ -47,3 +47,16 @@
   min-height: 300px;
   max-height: 300px;
 }
+
+.product-cart {
+  @extend .product-card-general;
+  width: 400px;
+  &-img {
+    height: 70px;
+    width: 70px;
+  }
+
+  h2 {
+    max-width: 40%;
+  }
+}

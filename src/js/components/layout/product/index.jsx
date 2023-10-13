@@ -21,8 +21,6 @@ export function Product() {
 
   const { addToCart } = useCartContext();
 
-  const { id } = product;
-
   if (isLoading) {
     return <div>Loading products</div>;
   }
@@ -46,7 +44,7 @@ export function Product() {
           <p>{product.discountedPrice} kr</p>
         </div>
         <button
-          onClick={() => addToCart(id, product)}
+          onClick={() => addToCart(product.id, product)}
           className="primary-button"
         >
           Add to cart

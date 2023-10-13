@@ -19,15 +19,26 @@ nav {
     list-style: none;
 
     li {
-      padding-left: 1em;
+      &:not(:first-of-type) {
+        margin-left: 1em;
+      }
       a {
-        @include gradientText(primary-yellow, gradient-yellow-light);
+        color: getColor(primary-yellow);
         font-style: italic;
         text-decoration: none;
         &:hover {
-          @include gradientText(primary-yellow, gradient-yellow);
+          color: getColor(dark-yellow);
         }
       }
     }
+  }
+  .cart-counter {
+    position: absolute;
+    color: getColor(body);
+    font-size: var(--fs-300);
+    font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    top: -35%;
+    left: 50%;
   }
 }

@@ -25,9 +25,9 @@ export function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/cart">
+          <Link to="/cart" className="position-relative">
             <img src="/icons/shopping-cart.png" alt="Shopping cart" />
-            <span>{sum}</span>
+            <span className="cart-counter">{sum}</span>
           </Link>
         </li>
       </ul>

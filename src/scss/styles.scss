@@ -34,6 +34,8 @@ body {
   @include gradientBackground(body, body-gradient);
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
   font-size: var(--fs-#{400});
+  background-attachment: fixed;
+  height: 100%;
 }
 
 h1,

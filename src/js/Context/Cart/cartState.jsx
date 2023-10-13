@@ -2,7 +2,7 @@ import { useContext, useEffect, useReducer } from "react";
 import CartContext from "./cartContext";
 import CartReducer from "./cartReducer";
 
-const getLocalCartData = () => {
+export const getLocalCartData = () => {
   let localCartData = localStorage.getItem("cartItems");
   if (!localCartData) {
     return [];
@@ -26,7 +26,7 @@ const CartState = ({ children }) => {
   };
 
   const removeFromCart = (id) => {
-    dispatch({ type: "remove_from_cart", id });
+    dispatch({ type: "remove_from_cart", payload: { id } });
   };
 
   const increase = (payload) => {
