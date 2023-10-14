@@ -46,6 +46,10 @@
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .display-flex, nav ul, header {
   display: flex;
   align-items: center;
@@ -92,6 +96,10 @@
 
 .text-bold {
   font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 header {
@@ -184,6 +192,10 @@ nav .cart-counter {
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 header {
   justify-content: space-between;
 }
@@ -234,6 +246,10 @@ header {
 
 .text-bold {
   font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .hero-banner {
@@ -321,6 +337,10 @@ header {
 
 .text-bold {
   font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .product-card-general, .product-cart, .product-card {
@@ -445,6 +465,10 @@ header {
 
 .text-bold {
   font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .product-card-general, .review, .product-cart, .product-card {
@@ -579,6 +603,10 @@ header {
   font-weight: 600;
 }
 
+.text-center {
+  text-align: center;
+}
+
 button {
   border: none;
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
@@ -591,6 +619,7 @@ button:hover {
 
 .icon-button {
   background: none;
+  margin: 0;
 }
 
 .icon-button img {
@@ -669,6 +698,10 @@ button:hover {
 
 .text-bold {
   font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .product-card-general, input, .product-cart, .product-card {
@@ -1106,7 +1139,6 @@ h3 {
 
 p {
   line-height: 30px;
-  padding: 5px;
 }
 
 nav a {
@@ -1117,6 +1149,15 @@ nav a {
 a {
   text-decoration: none;
   color: #010612;
+}
+
+.link-button {
+  color: #020d27;
+  font-size: var(--fs-400);
+}
+.link-button:hover {
+  text-decoration: underline;
+  color: #212d44;
 }
 
 .icon-width-32 {

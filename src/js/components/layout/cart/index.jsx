@@ -9,7 +9,19 @@ export function Cart() {
   // const productList = cart.map(products => products.product);
 
   console.log(cart);
-  console.log(total);
+  console.log(total.toFixed(2));
+
+  if (cart.length === 0) {
+    return (
+      <div className="m-l-20 m-r-20 text-center">
+        <h1>Cart</h1>
+        <p>Cart is empty</p>
+        <Link to="/">
+          <button className="primary-button">Go shopping</button>
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className="m-l-20 m-r-20">
@@ -46,14 +58,18 @@ export function Cart() {
           </div>
         ))}
       </div>
-      <button onClick={clearCart}>Clear cart</button>
-
       <div className="display-grid justify-end product-card-general p-10">
         <div>Discount </div>
-        <p>- {totalDiscount} kr</p>
+        <p>- {totalDiscount.toFixed(2)} kr</p>
         <div className="text-bold">Total </div>
-        <p className="text-bold">{total} kr</p>
+        <p className="text-bold">{total.toFixed(2)} kr</p>
       </div>
+      <button
+        className="link-button icon-button m-t-20 m-b-20"
+        onClick={clearCart}
+      >
+        Clear cart
+      </button>
       <Link to="checkout-success">
         <button onClick={checkoutCart} className="primary-button">
           checkout

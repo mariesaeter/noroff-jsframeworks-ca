@@ -62,7 +62,7 @@ h3 {
 
 p {
   line-height: 30px;
-  padding: 5px;
+  // padding: 5px;
 }
 
 nav {
@@ -75,6 +75,15 @@ nav {
 a {
   text-decoration: none;
   color: getColor(main-black);
+}
+
+.link-button {
+  color: getColor(primary-blue);
+  font-size: var(--fs-#{400});
+  &:hover {
+    text-decoration: underline;
+    color: getColor(secondary-blue);
+  }
 }
 
 .icon-width-32 {
