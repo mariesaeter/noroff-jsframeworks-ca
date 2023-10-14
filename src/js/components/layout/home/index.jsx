@@ -35,12 +35,17 @@ function Products() {
     <div className="products-container">
       {products.map((product) => (
         <Link to={`/${product.id}`} key={product.id} className="product-card">
-          <img
-            src={product.imageUrl}
-            alt={product.title}
-            className="product-card-img product-img"
-          />
-          <h2 className="product-card-title">{product.title}</h2>
+          <div className="product-card-img-container">
+            <img
+              src={product.imageUrl}
+              alt={product.title}
+              className="product-card-img product-img"
+            />
+            <button className="primary-button product-button">
+              view product
+            </button>
+          </div>
+          <h2 className="product-card-title m-t-10">{product.title}</h2>
           <span className="product-rating">{rating(product.rating)}</span>
           <div className="center-flex product-price m-b-10">
             <p className="m-r-10">{product.price} kr</p>

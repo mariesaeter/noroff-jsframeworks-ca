@@ -33,3 +33,12 @@ button {
     @include gradientBackground(secondary-blue, gradient-blue-light);
   }
 }
+
+.product-button {
+  font-size: var(--fs-400) !important;
+  width: 100%;
+  margin: 0;
+  position: relative;
+
+  display: none;
+}

@@ -40,9 +40,23 @@
 .product-card {
   @extend .product-card-general;
   text-align: center;
+
   &-img {
     min-height: 150px;
     max-height: 150px;
+  }
+  &-img-container {
+    max-height: 150px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    overflow: hidden;
+    .product-button {
+      display: block;
+      transform: translateY(-50px);
+      transition: transform 1s ease-in-out;
+    }
   }
 }
 
