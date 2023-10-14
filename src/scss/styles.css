@@ -552,6 +552,7 @@ header {
 button {
   border: none;
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  margin: 20px 0;
 }
 
 button:hover {
@@ -1052,6 +1053,7 @@ h3 {
 
 p {
   line-height: 30px;
+  padding: 5px;
 }
 
 nav a {

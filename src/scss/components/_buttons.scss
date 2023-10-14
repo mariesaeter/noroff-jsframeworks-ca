@@ -5,6 +5,7 @@ button {
   @extend .center-flex;
   border: none;
   font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+  margin: 20px 0;
 
   &:hover {
     cursor: pointer;
