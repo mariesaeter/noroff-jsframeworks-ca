@@ -3,11 +3,12 @@ import CartContext from "../../../Context/Cart/cartContext";
 import { Link } from "react-router-dom";
 
 export function Cart() {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, total, totalDiscount, clearCart } = useContext(CartContext);
 
   // const productList = cart.map(products => products.product);
 
   console.log(cart);
+  console.log(total);
 
   return (
     <div className="m-l-20 m-r-20">
@@ -37,19 +38,20 @@ export function Cart() {
                 </button>
               </div>
               <div className="product-price">
-                <p>{cartItem.product.price} kr</p>
-                <p>{cartItem.product.discountedPrice} kr</p>
+                <p>{cartItem.product.price * cartItem.quantity} kr</p>
+                <p>{cartItem.product.discountedPrice * cartItem.quantity} kr</p>
               </div>
             </div>
-            <button
-              value={cartItem.id}
-              onClick={() => removeFromCart(cartItem.id)}
-              className="icon-button"
-            >
-              <img src="/icons/delete.png" alt="delete item" />
-            </button>
           </div>
         ))}
+      </div>
+      <button onClick={clearCart}>Clear cart</button>
+
+      <div className="display-grid justify-end product-card-general p-10">
+        <div>Discount </div>
+        <p>- {totalDiscount} kr</p>
+        <div className="text-bold">Total </div>
+        <p className="text-bold">{total} kr</p>
       </div>
     </div>
   );

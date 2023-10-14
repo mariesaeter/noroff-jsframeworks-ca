@@ -51,6 +51,7 @@
 .product-cart {
   @extend .product-card-general;
   width: 400px;
+
   &-img {
     height: 70px;
     width: 70px;

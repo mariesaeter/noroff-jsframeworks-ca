@@ -9,6 +9,7 @@ const CartReducer = (state, action) => {
   let cart;
   let productId;
   let newTotal;
+  let newTotalDiscount;
 
   //   let { id, product } = action.payload;
 
@@ -30,16 +31,23 @@ const CartReducer = (state, action) => {
           ...cart.slice(productId + 1),
         ];
       }
-
       newTotal = cart.reduce((currentTotal, product) => {
-        currentTotal += product.discountedPrice * product.quantity;
+        currentTotal += product.product.discountedPrice * product.quantity;
         return currentTotal;
+      }, 0);
+
+      newTotalDiscount = cart.reduce((currentTotalDiscount, product) => {
+        currentTotalDiscount +=
+          product.product.price * product.quantity -
+          product.product.discountedPrice * product.quantity;
+        return currentTotalDiscount;
       }, 0);
 
       return {
         ...state,
         cart: cart,
         total: newTotal,
+        totalDiscount: newTotalDiscount,
         checkout: true,
       };
 

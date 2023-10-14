@@ -11,9 +11,40 @@ export const getLocalCartData = () => {
   }
 };
 
+const sum = () => {
+  let localCartData = localStorage.getItem("cartItems");
+  if (!localCartData) {
+    return 0;
+  } else {
+    const cartData = JSON.parse(localCartData);
+    let newTotal = cartData.reduce((currentTotal, product) => {
+      currentTotal += product.product.discountedPrice * product.quantity;
+      return currentTotal;
+    }, 0);
+    return newTotal;
+  }
+};
+
+const sumDiscount = () => {
+  let localCartData = localStorage.getItem("cartItems");
+  if (!localCartData) {
+    return 0;
+  } else {
+    const cartData = JSON.parse(localCartData);
+    let newTotalDiscount = cartData.reduce((currentTotalDiscount, product) => {
+      currentTotalDiscount +=
+        product.product.price * product.quantity -
+        product.product.discountedPrice * product.quantity;
+      return currentTotalDiscount;
+    }, 0);
+    return newTotalDiscount;
+  }
+};
+
 const initialState = {
   cart: getLocalCartData(),
-  total: 0,
+  total: sum(),
+  totalDiscount: sumDiscount(),
   checkout: false,
 };
 
@@ -54,6 +85,7 @@ const CartState = ({ children }) => {
       value={{
         cart: state.cart,
         total: state.total,
+        totalDiscount: state.totalDiscount,
         addToCart,
         removeFromCart,
         clearCart,

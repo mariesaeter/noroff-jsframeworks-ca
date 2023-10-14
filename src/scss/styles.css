@@ -23,6 +23,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -36,6 +40,10 @@
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 .display-flex, nav ul, header {
@@ -63,6 +71,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -76,6 +88,10 @@
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 header {
@@ -145,6 +161,10 @@ nav .cart-counter {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -158,6 +178,10 @@ nav .cart-counter {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 header {
@@ -189,6 +213,10 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -202,6 +230,10 @@ header {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 .hero-banner {
@@ -268,6 +300,10 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -281,6 +317,10 @@ header {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 .product-card-general, .product-cart, .product-card {
@@ -368,6 +408,10 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -381,6 +425,10 @@ header {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 .product-card-general, .review, .product-cart, .product-card {
@@ -476,6 +524,10 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -489,6 +541,10 @@ header {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 button {
@@ -551,6 +607,10 @@ button:hover {
   grid-template-columns: 1fr 1fr;
 }
 
+.justify-end {
+  justify-items: end;
+}
+
 .position-relative {
   position: relative;
 }
@@ -564,6 +624,10 @@ button:hover {
 
 .text-align-center {
   text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 .product-card-general, input, .product-cart, .product-card {
