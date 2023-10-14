@@ -9,6 +9,7 @@ import {
   Product,
   RouteNotFound,
   Search,
+  CheckoutSuccess,
 } from "./js/components/layout";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="search" element={<Search />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="cart/checkout-success" element={<CheckoutSuccess />} />
           <Route path=":id" element={<Product />} />
           <Route path="*" element={<RouteNotFound />} />
         </Route>

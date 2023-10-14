@@ -1,15 +1,18 @@
+// import { useNavigate } from "react-router-dom";
+
 const add_to_cart = "add_to_cart";
 const remove_from_cart = "remove_from_cart";
 const clear_cart = "clear_cart";
 // const increase = "increase";
 // const decrease = "decrease";
-// const checkout = "checkout";
+const checkout_cart = "checkout_cart";
 
 const CartReducer = (state, action) => {
   let cart;
   let productId;
   let newTotal;
   let newTotalDiscount;
+  // const navigate = useNavigate();
 
   //   let { id, product } = action.payload;
 
@@ -48,7 +51,7 @@ const CartReducer = (state, action) => {
         cart: cart,
         total: newTotal,
         totalDiscount: newTotalDiscount,
-        checkout: true,
+        checkout: false,
       };
 
     case remove_from_cart:
@@ -101,12 +104,20 @@ const CartReducer = (state, action) => {
         ...state,
         cart: cart,
         total: newTotal,
-        checkout: true,
+        checkout: false,
       };
 
     case clear_cart:
+      // route to link to checkout success
+
       return { cart: [], total: 0, checkout: false };
 
+    case checkout_cart:
+      // cart = [...state.cart];
+      // if (cart.length !== 0) {
+      //   navigate("checkout-success");
+      // }
+      return { cart: [], total: 0, totalDiscount: 0, checkout: true };
     default:
       return state;
   }

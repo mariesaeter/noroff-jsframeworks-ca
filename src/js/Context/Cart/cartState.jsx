@@ -72,8 +72,8 @@ const CartState = ({ children }) => {
     dispatch({ type: "clear_cart" });
   };
 
-  const checkout = () => {
-    dispatch({ type: "checkout" });
+  const checkoutCart = () => {
+    dispatch({ type: "checkout_cart" });
   };
 
   useEffect(() => {
@@ -91,7 +91,7 @@ const CartState = ({ children }) => {
         clearCart,
         increase,
         decrease,
-        checkout,
+        checkoutCart,
         ...state,
       }}
     >

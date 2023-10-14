@@ -7,6 +7,7 @@ export { Search } from "./search";
 export { Cart } from "./cart";
 export { RouteNotFound } from "./route-not-found";
 export { Product } from "./product";
+export { CheckoutSuccess } from "./checkoutSuccess";
 
 export function Layout() {
   return (

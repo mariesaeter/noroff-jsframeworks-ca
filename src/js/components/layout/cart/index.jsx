@@ -3,7 +3,8 @@ import CartContext from "../../../Context/Cart/cartContext";
 import { Link } from "react-router-dom";
 
 export function Cart() {
-  const { cart, total, totalDiscount, clearCart } = useContext(CartContext);
+  const { cart, total, totalDiscount, clearCart, checkoutCart } =
+    useContext(CartContext);
 
   // const productList = cart.map(products => products.product);
 
@@ -53,6 +54,11 @@ export function Cart() {
         <div className="text-bold">Total </div>
         <p className="text-bold">{total} kr</p>
       </div>
+      <Link to="checkout-success">
+        <button onClick={checkoutCart} className="primary-button">
+          checkout
+        </button>
+      </Link>
     </div>
   );
 }
