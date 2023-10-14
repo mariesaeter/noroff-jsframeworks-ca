@@ -49,7 +49,7 @@ export function Search() {
   // };
 
   return (
-    <div className="m-l-20 m-r-20">
+    <div className="m-l-20 m-r-20 display-flex-column">
       <h1>Search</h1>
       <input
         type="text"

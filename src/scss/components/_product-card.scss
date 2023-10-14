@@ -16,10 +16,13 @@
 }
 
 .product-price {
-  text-align: center;
   p:nth-child(1) {
     color: getColor(gray-text);
     text-decoration: line-through;
+  }
+  &-percentage {
+    color: getColor(secondary-blue);
+    font-style: italic;
   }
 }
 

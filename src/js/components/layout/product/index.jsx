@@ -13,6 +13,12 @@ const url = "https://api.noroff.dev/api/v1/online-shop";
 //   const { id } = product;
 // };
 
+function percentageDiscount(product) {
+  let percentage = 100 - (product.discountedPrice / product.price) * 100;
+  let roundedPercentage = percentage.toFixed(0);
+  return roundedPercentage;
+}
+
 export function Product() {
   let params = useParams();
   const { products, isLoading, isError } = useApi(`${url}/${params.id}`);
@@ -40,8 +46,13 @@ export function Product() {
         <p>{product.description}</p>
 
         <div className="product-price m-b-10">
-          <p>{product.price} kr</p>
-          <p>{product.discountedPrice} kr</p>
+          <p>Original price: {product.price} kr</p>
+          <p>
+            {product.discountedPrice} kr
+            <span className="m-l-10 product-price-percentage ">
+              {percentageDiscount(product)}% discount
+            </span>
+          </p>
         </div>
         <button
           onClick={() => addToCart(product.id, product)}

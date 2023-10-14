@@ -339,13 +339,14 @@ header {
   font-weight: 500;
 }
 
-.product-price {
-  text-align: center;
-}
-
 .product-price p:nth-child(1) {
   color: #71747b;
   text-decoration: line-through;
+}
+
+.product-price-percentage {
+  color: #212d44;
+  font-style: italic;
 }
 
 .product-rating img {
@@ -447,13 +448,14 @@ header {
   font-weight: 500;
 }
 
-.product-price {
-  text-align: center;
-}
-
 .product-price p:nth-child(1) {
   color: #71747b;
   text-decoration: line-through;
+}
+
+.product-price-percentage {
+  color: #212d44;
+  font-style: italic;
 }
 
 .product-rating img {
@@ -646,13 +648,14 @@ button:hover {
   font-weight: 500;
 }
 
-.product-price {
-  text-align: center;
-}
-
 .product-price p:nth-child(1) {
   color: #71747b;
   text-decoration: line-through;
+}
+
+.product-price-percentage {
+  color: #212d44;
+  font-style: italic;
 }
 
 .product-rating img {
