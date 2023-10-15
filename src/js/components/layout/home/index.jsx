@@ -32,7 +32,7 @@ function Products() {
   }
 
   return (
-    <div className="products-container">
+    <div className="products-container max-width">
       {products.map((product) => (
         <Link to={`/${product.id}`} key={product.id} className="product-card">
           <div className="product-card-img-container">

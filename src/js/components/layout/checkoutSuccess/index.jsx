@@ -8,7 +8,7 @@ export function CheckoutSuccess() {
         <title>Checkout success</title>
         <meta name="description" content="TrendTrove - Checkout success page" />
       </Helmet>
-      <div className="m-l-20 m-r-20">
+      <div className="p-l-20 p-r-20 max-width">
         <h1>Order received!</h1>
         <p>
           Your order have been received successfully and will be shipped as soon

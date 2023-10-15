@@ -98,7 +98,7 @@ export function Contact() {
         <title>Contact</title>
         <meta name="description" content="TrendTrove - Contact page" />
       </Helmet>
-      <div className="m-l-20 m-r-20">
+      <div className="p-l-20 p-r-20 max-width">
         <h1>Contact</h1>
         <p className="p-l-5 p-r-5">
           Feel free to contact us if you have any questions, problems or

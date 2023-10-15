@@ -724,7 +724,8 @@ button:hover {
 }
 
 form {
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 500px;
 }
 
 input {
@@ -1201,4 +1202,14 @@ a {
 
 .error {
   color: #af0606;
+}
+
+.max-width-500 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.max-width {
+  max-width: 700px;
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */

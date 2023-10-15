@@ -1,7 +1,8 @@
 @import "./product-card";
 
 form {
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 500px;
 }
 input {
   @extend .product-card-general;

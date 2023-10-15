@@ -32,7 +32,7 @@ export function Search() {
         <title>Search</title>
         <meta name="description" content="TrendTrove - Search page" />
       </Helmet>
-      <div className="m-l-20 m-r-20 display-flex-column">
+      <div className="p-l-20 p-r-20 display-flex-column max-width-500">
         <h1>Search</h1>
         <input
           type="text"

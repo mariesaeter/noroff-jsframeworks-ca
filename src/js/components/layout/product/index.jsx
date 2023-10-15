@@ -21,7 +21,7 @@ export function Product() {
 
   const product = products;
 
-  const { addToCart, textButton } = useCartContext();
+  const { addToCart } = useCartContext();
 
   if (isLoading) {
     return (
@@ -40,19 +40,19 @@ export function Product() {
         <title>{product.title}</title>
         <meta name="description" content="TrendTrove - Product page" />
       </Helmet>
-      <div className="product-page" key={product.id}>
+      <div className="product-page max-width" key={product.id}>
         <img
           src={product.imageUrl}
           alt={product.title}
           className="product-img"
         />
-        <div className="m-l-20 m-r-20">
+        <div className="p-l-20 p-r-20">
           <h1>{product.title}</h1>
           <p>{product.description}</p>
 
           <div className="product-price m-b-10">
             <p>Original price: {product.price} kr</p>
-            <p>
+            <p className="text-bold">
               {product.discountedPrice} kr
               <span className="m-l-10 product-price-percentage ">
                 {percentageDiscount(product)}% discount
@@ -63,7 +63,7 @@ export function Product() {
             onClick={() => addToCart(product.id, product)}
             className="primary-button"
           >
-            {textButton}
+            Add to cart
             <img
               src="/icons/add-to-cart.png"
               alt="add to cart"
