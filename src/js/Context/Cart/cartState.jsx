@@ -60,12 +60,12 @@ const CartState = ({ children }) => {
     dispatch({ type: "remove_from_cart", payload: { id } });
   };
 
-  const increase = (payload) => {
-    dispatch({ type: "increase", payload });
+  const increase = (id) => {
+    dispatch({ type: "increase", payload: id });
   };
 
-  const decrease = (payload) => {
-    dispatch({ type: "decrease", payload });
+  const decrease = (id) => {
+    dispatch({ type: "decrease", payload: id });
   };
 
   const clearCart = () => {

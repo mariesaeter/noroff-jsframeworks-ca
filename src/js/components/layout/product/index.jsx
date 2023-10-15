@@ -9,12 +9,6 @@ import { Helmet } from "react-helmet";
 
 const url = "https://api.noroff.dev/api/v1/online-shop";
 
-// const AddToCart = ({ product }) => {
-//   const { addToCart } = useCartContext();
-
-//   const { id } = product;
-// };
-
 function percentageDiscount(product) {
   let percentage = 100 - (product.discountedPrice / product.price) * 100;
   let roundedPercentage = percentage.toFixed(0);
@@ -39,10 +33,6 @@ export function Product() {
   if (isError) {
     return <div>There was an error when trying to load product</div>;
   }
-
-  // function addToCart() {
-  //   localStorage.setItem("cartItems", JSON.stringify(products));
-  // }
 
   return (
     <>

@@ -2,15 +2,9 @@ import { useState } from "react";
 import { useApi } from "../../../hooks/api";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { ProductImgAndTitle } from "../../ProductImgAndTitle";
 
 const url = "https://api.noroff.dev/api/v1/online-shop";
-
-// function SearchProduct() {
-
-//   return (
-
-//   )
-// }
 
 // inspired by:
 // https://dev.to/alais29/building-a-real-time-search-filter-in-react-a-step-by-step-guide-3lmm
@@ -31,23 +25,6 @@ export function Search() {
     );
     setFilteredItems(filteredProducts);
   };
-
-  // const [state, setstate] = useState({
-  //   searchword: " ",
-  //   list: [],
-  // });
-  // const handleChange = (e) => {
-  //   const searchResult = products.filter((product) => {
-  //     if (e.target.value === "") {
-  //       return products;
-  //     }
-  //     return product.title.toLowerCase().includes(e.target.value.toLowerCase());
-  //   });
-  //   setstate({
-  //     searchword: e.target.value,
-  //     list: searchResult,
-  //   });
-  // };
 
   return (
     <>
@@ -71,12 +48,10 @@ export function Search() {
                 className="product-cart m-b-10 display-flex justify-content-between"
               >
                 <div className="display-flex">
-                  <img
-                    className="product-img product-cart-img"
-                    src={product.imageUrl}
-                    alt={product.title}
+                  <ProductImgAndTitle
+                    imageUrl={product.imageUrl}
+                    title={product.title}
                   />
-                  <h2 className="product-card-title m-l-10">{product.title}</h2>
                 </div>
                 <div className="product-price m-r-10">
                   <p>{product.price} kr</p>
@@ -86,22 +61,6 @@ export function Search() {
             </li>
           ))}
         </ul>
-
-        {/* <form className="display-flex-column">
-        <input
-          placeholder="search"
-          type="search"
-          value={state.searchword}
-          onChange={handleChange}
-        />
-      </form>
-      <ul>
-        {state.searchword === ""
-          ? ""
-          : state.list.map((product) => {
-              return <li key={product.title}>{product.title}</li>;
-            })}
-      </ul> */}
       </div>
     </>
   );

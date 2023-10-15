@@ -18,12 +18,6 @@ function Banner() {
 }
 const url = "https://api.noroff.dev/api/v1/online-shop";
 
-// function Product() {
-//   return (
-
-//   )
-// }
-
 function Products() {
   const { products, isLoading, isError } = useApi(url);
   if (isLoading) {
