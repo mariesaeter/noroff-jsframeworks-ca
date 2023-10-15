@@ -396,9 +396,8 @@ header {
 }
 
 .product-card:hover .product-button {
-  display: block;
-  transform: translateY(-50px);
-  transition: transform 1s ease-in-out;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 .product-page .product-img {
@@ -524,9 +523,8 @@ header {
 }
 
 .product-card:hover .product-button {
-  display: block;
-  transform: translateY(-50px);
-  transition: transform 1s ease-in-out;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 .product-page .product-img {
@@ -649,7 +647,9 @@ button:hover {
   width: 100%;
   margin: 0;
   position: relative;
-  display: none;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 .display-flex {
@@ -757,9 +757,8 @@ button:hover {
 }
 
 .product-card:hover .product-button {
-  display: block;
-  transform: translateY(-50px);
-  transition: transform 1s ease-in-out;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
 .product-page .product-img {

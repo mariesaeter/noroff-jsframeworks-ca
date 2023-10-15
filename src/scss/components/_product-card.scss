@@ -53,9 +53,8 @@
   &:hover {
     overflow: hidden;
     .product-button {
-      display: block;
-      transform: translateY(-50px);
-      transition: transform 1s ease-in-out;
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
     }
   }
 }

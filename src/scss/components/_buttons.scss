@@ -40,6 +40,7 @@ button {
   width: 100%;
   margin: 0;
   position: relative;
-
-  display: none;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
