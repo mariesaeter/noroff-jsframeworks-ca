@@ -26,7 +26,7 @@ export function Cart() {
         <title>Cart</title>
         <meta name="description" content="TrendTrove - Cart page" />
       </Helmet>
-      <div className="m-l-20 m-r-20">
+      <div className="p-l-20 p-r-20 p-b-20 max-width-500">
         <h1>Cart</h1>
 
         {cart.map((cartItem) => (
@@ -65,23 +65,25 @@ export function Cart() {
           </div>
         ))}
       </div>
-      <div className="display-grid justify-end product-card-general p-10">
-        <div>Discount </div>
-        <p>- {totalDiscount.toFixed(2)} kr</p>
-        <div className="text-bold">Total </div>
-        <p className="text-bold">{total.toFixed(2)} kr</p>
-      </div>
-      <button
-        className="link-button icon-button m-t-20 m-b-20"
-        onClick={clearCart}
-      >
-        Clear cart
-      </button>
-      <Link to="checkout-success">
-        <button onClick={checkoutCart} className="primary-button">
-          checkout
+      <div className="max-width-500 p-l-20 p-r-20">
+        <div className="display-grid justify-end product-card-general p-10">
+          <div>Discount </div>
+          <p>- {totalDiscount.toFixed(2)} kr</p>
+          <div className="text-bold">Total </div>
+          <p className="text-bold">{total.toFixed(2)} kr</p>
+        </div>
+        <button
+          className="link-button icon-button m-t-20 m-b-20"
+          onClick={clearCart}
+        >
+          Clear cart
         </button>
-      </Link>
+        <Link to="checkout-success">
+          <button onClick={checkoutCart} className="primary-button">
+            checkout
+          </button>
+        </Link>
+      </div>
     </>
   );
 }
