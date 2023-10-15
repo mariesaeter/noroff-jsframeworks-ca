@@ -34,7 +34,7 @@ function Products() {
     );
   }
   if (isError) {
-    return <div>Error with loading products</div>;
+    return <div>There was an error when trying to fetch products</div>;
   }
 
   return (
