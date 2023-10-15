@@ -4,6 +4,7 @@ import { rating } from "../rating";
 import { reviews } from "./reviews";
 
 import { useCartContext } from "../../../Context/Cart/cartState";
+import { Dots } from "../../dots";
 
 const url = "https://api.noroff.dev/api/v1/online-shop";
 
@@ -28,7 +29,11 @@ export function Product() {
   const { addToCart } = useCartContext();
 
   if (isLoading) {
-    return <div>Loading products</div>;
+    return (
+      <div className="loader">
+        <Dots />
+      </div>
+    );
   }
   if (isError) {
     return <div>Error with loading products</div>;

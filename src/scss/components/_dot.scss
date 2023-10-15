@@ -1,0 +1,8 @@
+@import "../utilities/";
+
+.dot {
+  @include gradientBackground(secondary-blue, gradient-blue-light);
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+}

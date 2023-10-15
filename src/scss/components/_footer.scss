@@ -1,11 +1,11 @@
-@import "../utilities/";
+// @import "../utilities/";
+// @import "./dot";
+
 footer {
-  .dot {
-    @include gradientBackground(secondary-blue, gradient-blue-light);
-    height: 7px;
-    width: 7px;
-    border-radius: 100%;
-  }
+  //   .dot {
+  //     @extend .dot;
+  //     @include gradientBackground(secondary-blue, gradient-blue-light);
+  //   }
   p {
     font-style: italic;
     color: getColor(secondary-blue);

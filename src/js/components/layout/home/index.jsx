@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useApi } from "../../../hooks/api";
 import { rating } from "../rating";
+import { Dots } from "../../dots";
 
 function Banner() {
   return (
@@ -25,7 +26,11 @@ const url = "https://api.noroff.dev/api/v1/online-shop";
 function Products() {
   const { products, isLoading, isError } = useApi(url);
   if (isLoading) {
-    return <div>Loading products</div>;
+    return (
+      <div className="loader">
+        <Dots />
+      </div>
+    );
   }
   if (isError) {
     return <div>Error with loading products</div>;

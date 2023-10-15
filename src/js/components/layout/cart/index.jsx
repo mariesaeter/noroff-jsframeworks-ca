@@ -28,9 +28,9 @@ export function Cart() {
       <h1>Cart</h1>
       <div>
         {cart.map((cartItem) => (
-          <div className="display-flex" key={cartItem.product.id}>
+          <div key={cartItem.product.id}>
             <div className="product-cart m-b-10 display-flex justify-content-between">
-              <Link to={cartItem.id} className="display-flex">
+              <Link to={`/${cartItem.id}`} className="display-flex">
                 <img
                   className="product-img product-cart-img"
                   src={cartItem.product.imageUrl}

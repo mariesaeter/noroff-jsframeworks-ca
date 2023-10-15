@@ -416,7 +416,7 @@ header {
 }
 
 .product-cart h2 {
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
 }
 
 .display-flex {
@@ -544,7 +544,7 @@ header {
 }
 
 .product-cart h2 {
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
 }
 
 .review-username {
@@ -777,7 +777,7 @@ button:hover {
 }
 
 .product-cart h2 {
-  font-size: var(--fs-400);
+  font-size: var(--fs-300);
 }
 
 form {
@@ -796,6 +796,35 @@ input:focus {
   outline: none;
 }
 
+footer p {
+  font-style: italic;
+  color: getColor(secondary-blue);
+}
+
+.loader {
+  margin-top: 30px;
+}
+
+.loader .dot {
+  animation: jumping 1s linear infinite;
+}
+
+.loader .dot:nth-child(2) {
+  animation-delay: -0.8s;
+}
+
+.loader .dot:nth-child(3) {
+  animation-delay: -0.6s;
+}
+
+@keyframes jumping {
+  0%, 60%, 100% {
+    transform: initial;
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+}
 .display-flex {
   display: flex;
   align-items: center;
@@ -848,7 +877,7 @@ input:focus {
   text-align: center;
 }
 
-footer .dot {
+.dot {
   background-color: #212d44;
   background-image: linear-gradient(180deg, rgb(53, 73, 110) 0%, rgb(33, 45, 68) 100%);
   background-size: 100%;
@@ -856,11 +885,6 @@ footer .dot {
   height: 7px;
   width: 7px;
   border-radius: 100%;
-}
-
-footer p {
-  font-style: italic;
-  color: #212d44;
 }
 
 .p-0 {
