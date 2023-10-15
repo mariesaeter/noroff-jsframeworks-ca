@@ -77,14 +77,14 @@ To apply knowledge of React to build an eCom store.
  Feel free to contact me!
  
   ## Design process
- Wireframes can be found in the repo, prototypes can be found below.
+ Prototype for mobile and styletile can be found below.
  
  > [_Style guide_](https://xd.adobe.com/view/21c928da-de50-402a-8172-ac3f6a7e3ba9-749a/)
  
  > [_Mobile prototype_](https://xd.adobe.com/view/b23d7bfb-862f-4b70-9f83-ac92d2d452bb-e76e/)
 
 ## Work process
-There are some planned features that may be missing or lacking due to unplanned sickness during the working process before assignment delivery. 
+There are some planned features that may be missing or lacking due to unplanned sickness during the working process before assignment delivery. During this assignment I chose to focus on getting to know SCSS more for styling without combining it with Bootstrap. This has given me a broader understanding of the opportunities in SCSS such as mixins, functions and extending of classes. I've also gotten more familiar with React, but as this is my first React project there's still a lot of new things to get familiar with. 
 
 ## To do
 + Adjust responsiveness for larger screens
@@ -109,8 +109,8 @@ There are some planned features that may be missing or lacking due to unplanned 
  #### Spacing classes (margin and padding)
  Inspired by [Jerry Thimothy J at medium.com](https://medium.com/@jerrythimothy/margins-paddings-sass-mixin-16460c32507f)
 
- ### Responsive font sizes 
+ #### Responsive font sizes 
  Inspired by [dev.to](https://dev.to/dostonnabotov/responsive-font-sizes-with-sass-maps-and-each-2ge9)
 
- ### Shopping cart
+ #### Shopping cart
  Inspired by [Annastacia Kioko at dev.to](https://dev.to/anne46/cart-functionality-in-react-with-context-api-2k2f), [Israel Oyetunji at hashnode.dev](https://israelmitolu.hashnode.dev/build-an-ecommerce-shopping-app-with-react-context-api), [Thapa Technical on youtube](https://www.youtube.com/watch?v=sGMb0dGiX74) & Noroff lessons
