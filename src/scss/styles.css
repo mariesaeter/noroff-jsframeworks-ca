@@ -796,6 +796,73 @@ input:focus {
   outline: none;
 }
 
+.display-flex {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.justify-end {
+  justify-items: end;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+footer .dot {
+  background-color: #212d44;
+  background-image: linear-gradient(180deg, rgb(53, 73, 110) 0%, rgb(33, 45, 68) 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+}
+
+footer p {
+  font-style: italic;
+  color: #212d44;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -1117,7 +1184,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+footer {
   font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
   color: #020d27;
 }

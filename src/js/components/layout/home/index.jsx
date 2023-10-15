@@ -61,7 +61,7 @@ export function Home() {
   return (
     <div>
       <Banner />
-      <div className="m-l-20 m-r-20">
+      <div className="m-l-20 m-r-20 m-b-20">
         <h1>Products</h1>
         <Products />
       </div>
