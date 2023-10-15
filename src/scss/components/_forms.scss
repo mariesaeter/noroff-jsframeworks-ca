@@ -9,8 +9,9 @@ input {
   max-width: 500px;
   padding-left: 10px;
   border: solid 1px #fff;
-  margin-bottom: 10px;
+
   &:focus {
     border: solid 2px getColor(primary-yellow);
+    outline: none;
   }
 }

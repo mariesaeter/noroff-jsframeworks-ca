@@ -4,10 +4,19 @@ import * as yup from "yup";
 import { useEffect } from "react";
 
 const schema = yup.object({
-  fullName: yup.string().min(3).required(),
-  subject: yup.string().min(3).required(),
-  email: yup.string().email().required(),
-  body: yup.string().min(3).required(),
+  fullName: yup
+    .string()
+    .min(3, "Name must be at least 3 characters long")
+    .required(),
+  subject: yup
+    .string()
+    .min(3, "Subject must be at least 3 characters long")
+    .required(),
+  email: yup
+    .string()
+    .email()
+    .required("Email must be in correct format: example@mail.com"),
+  body: yup.string().min(3, "Message must be at least 3 characters").required(),
 });
 
 function ContactForm() {
@@ -30,7 +39,7 @@ function ContactForm() {
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="display-flex-column">
+      <div className="display-flex-column m-b-10">
         <label htmlFor="fullName">Full name</label>
         <input
           {...register("fullName", {
@@ -39,9 +48,9 @@ function ContactForm() {
           })}
           placeholder="Full name"
         />
-        <p>{errors.fullName?.message}</p>
+        <p className="error">{errors.fullName?.message}</p>
       </div>
-      <div className="display-flex-column">
+      <div className="display-flex-column m-b-10">
         <label htmlFor="subject">Subject</label>
         <input
           {...register("subject", {
@@ -50,9 +59,9 @@ function ContactForm() {
           })}
           placeholder="Subject"
         />
-        <p>{errors.subject?.message}</p>
+        <p className="error">{errors.subject?.message}</p>
       </div>
-      <div className="display-flex-column">
+      <div className="display-flex-column m-b-10">
         <label htmlFor="email">Email</label>
         <input
           {...register("email", {
@@ -61,7 +70,7 @@ function ContactForm() {
           })}
           placeholder="Email"
         />
-        <p>{errors.email?.message}</p>
+        <p className="error">{errors.email?.message}</p>
       </div>
       <div className="display-flex-column">
         <label htmlFor="body">Message</label>
@@ -72,7 +81,7 @@ function ContactForm() {
           })}
           placeholder="Message"
         />
-        <p>{errors.body?.message}</p>
+        <p className="error">{errors.body?.message}</p>
       </div>
       <button className="primary-button m-t-20" type="submit">
         Send message

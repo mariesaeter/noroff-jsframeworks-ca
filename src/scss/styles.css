@@ -789,11 +789,11 @@ input {
   max-width: 500px;
   padding-left: 10px;
   border: solid 1px #fff;
-  margin-bottom: 10px;
 }
 
 input:focus {
   border: solid 2px #d4af35;
+  outline: none;
 }
 
 .p-0 {
@@ -1162,4 +1162,8 @@ a {
 
 .icon-width-32 {
   width: 32px;
+}
+
+.error {
+  color: #af0606;
 }/*# sourceMappingURL=styles.css.map */
