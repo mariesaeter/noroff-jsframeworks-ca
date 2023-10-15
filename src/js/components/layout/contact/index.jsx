@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const schema = yup.object({
   fullName: yup
@@ -92,13 +93,19 @@ function ContactForm() {
 
 export function Contact() {
   return (
-    <div className="m-l-20 m-r-20">
-      <h1>Contact</h1>
-      <p className="p-l-5 p-r-5">
-        Feel free to contact us if you have any questions, problems or
-        recommendations! We would love to hear from you.
-      </p>
-      <ContactForm />
-    </div>
+    <>
+      <Helmet>
+        <title>Contact</title>
+        <meta name="description" content="TrendTrove - Contact page" />
+      </Helmet>
+      <div className="m-l-20 m-r-20">
+        <h1>Contact</h1>
+        <p className="p-l-5 p-r-5">
+          Feel free to contact us if you have any questions, problems or
+          recommendations! We would love to hear from you.
+        </p>
+        <ContactForm />
+      </div>
+    </>
   );
 }

@@ -5,6 +5,7 @@ import { reviews } from "./reviews";
 
 import { useCartContext } from "../../../Context/Cart/cartState";
 import { Dots } from "../../dots";
+import { Helmet } from "react-helmet";
 
 const url = "https://api.noroff.dev/api/v1/online-shop";
 
@@ -44,39 +45,49 @@ export function Product() {
   // }
 
   return (
-    <div className="product-page" key={product.id}>
-      <img src={product.imageUrl} alt={product.title} className="product-img" />
-      <div className="m-l-20 m-r-20">
-        <h1>{product.title}</h1>
-        <p>{product.description}</p>
+    <>
+      <Helmet>
+        <title>{product.title}</title>
+        <meta name="description" content="TrendTrove - Product page" />
+      </Helmet>
+      <div className="product-page" key={product.id}>
+        <img
+          src={product.imageUrl}
+          alt={product.title}
+          className="product-img"
+        />
+        <div className="m-l-20 m-r-20">
+          <h1>{product.title}</h1>
+          <p>{product.description}</p>
 
-        <div className="product-price m-b-10">
-          <p>Original price: {product.price} kr</p>
-          <p>
-            {product.discountedPrice} kr
-            <span className="m-l-10 product-price-percentage ">
-              {percentageDiscount(product)}% discount
-            </span>
-          </p>
-        </div>
-        <button
-          onClick={() => addToCart(product.id, product)}
-          className="primary-button"
-        >
-          Add to cart
-          <img
-            src="/icons/add-to-cart.png"
-            alt="add to cart"
-            className="icon-width-32 m-l-5"
-          />
-        </button>
-        <div>
-          <h2>Reviews</h2>
-          <span className="product-rating">{rating(product.rating)}</span>
-          <small>{product.rating} stars </small>
-          {reviews(product.reviews)}
+          <div className="product-price m-b-10">
+            <p>Original price: {product.price} kr</p>
+            <p>
+              {product.discountedPrice} kr
+              <span className="m-l-10 product-price-percentage ">
+                {percentageDiscount(product)}% discount
+              </span>
+            </p>
+          </div>
+          <button
+            onClick={() => addToCart(product.id, product)}
+            className="primary-button"
+          >
+            Add to cart
+            <img
+              src="/icons/add-to-cart.png"
+              alt="add to cart"
+              className="icon-width-32 m-l-5"
+            />
+          </button>
+          <div>
+            <h2>Reviews</h2>
+            <span className="product-rating">{rating(product.rating)}</span>
+            <small>{product.rating} stars </small>
+            {reviews(product.reviews)}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

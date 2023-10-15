@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useApi } from "../../../hooks/api";
 import { rating } from "../rating";
 import { Dots } from "../../dots";
+import { Helmet } from "react-helmet";
 
 function Banner() {
   return (
@@ -64,12 +65,18 @@ function Products() {
 
 export function Home() {
   return (
-    <div>
-      <Banner />
-      <div className="m-l-20 m-r-20 m-b-20">
-        <h1>Products</h1>
-        <Products />
+    <>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="TrendTrove - Home page" />
+      </Helmet>
+      <div>
+        <Banner />
+        <div className="m-l-20 m-r-20 m-b-20">
+          <h1>Products</h1>
+          <Products />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
