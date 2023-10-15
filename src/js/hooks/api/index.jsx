@@ -14,7 +14,6 @@ export function useApi(url) {
         const json = await fetchedProducts.json();
         setProducts(json);
       } catch (error) {
-        console.log(error);
         setIsError(true);
       } finally {
         setIsLoading(false);

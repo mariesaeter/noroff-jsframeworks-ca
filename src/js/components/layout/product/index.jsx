@@ -21,7 +21,7 @@ export function Product() {
 
   const product = products;
 
-  const { addToCart } = useCartContext();
+  const { addToCart, textButton } = useCartContext();
 
   if (isLoading) {
     return (
@@ -63,7 +63,7 @@ export function Product() {
             onClick={() => addToCart(product.id, product)}
             className="primary-button"
           >
-            Add to cart
+            {textButton}
             <img
               src="/icons/add-to-cart.png"
               alt="add to cart"

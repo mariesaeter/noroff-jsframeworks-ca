@@ -56,18 +56,6 @@ const CartState = ({ children }) => {
     dispatch({ type: "add_to_cart", payload: { id, product } });
   };
 
-  const removeFromCart = (id) => {
-    dispatch({ type: "remove_from_cart", payload: { id } });
-  };
-
-  const increase = (id) => {
-    dispatch({ type: "increase", payload: id });
-  };
-
-  const decrease = (id) => {
-    dispatch({ type: "decrease", payload: id });
-  };
-
   const clearCart = () => {
     dispatch({ type: "clear_cart" });
   };
@@ -87,10 +75,7 @@ const CartState = ({ children }) => {
         total: state.total,
         totalDiscount: state.totalDiscount,
         addToCart,
-        removeFromCart,
         clearCart,
-        increase,
-        decrease,
         checkoutCart,
         ...state,
       }}

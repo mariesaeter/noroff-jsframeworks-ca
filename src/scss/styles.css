@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-.display-flex, nav ul, header {
+.display-flex, nav ul {
   display: flex;
   align-items: center;
 }
@@ -142,62 +142,6 @@ nav .cart-counter {
   font-style: normal;
   top: -35%;
   left: 50%;
-}
-
-.display-flex, header {
-  display: flex;
-  align-items: center;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.display-flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.center-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.display-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.justify-end {
-  justify-items: end;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.position-absolute-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.text-bold {
-  font-weight: 600;
-}
-
-.text-center {
-  text-align: center;
-}
-
-header {
-  justify-content: space-between;
 }
 
 .display-flex {

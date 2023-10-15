@@ -22,7 +22,6 @@ button {
 }
 
 .primary-button {
-  //   background: getColor(primary-blue);
   @include gradientBackground(primary-blue, gradient-blue);
   color: getColor(body);
   padding: 10px 40px;
@@ -30,7 +29,6 @@ button {
   font-weight: 600;
 
   &:hover {
-    // background: getColor(secondary-blue);
     @include gradientBackground(secondary-blue, gradient-blue-light);
   }
 }

@@ -14,19 +14,17 @@ import {
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="search" element={<Search />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="cart/checkout-success" element={<CheckoutSuccess />} />
-          <Route path=":id" element={<Product />} />
-          <Route path="*" element={<RouteNotFound />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="search" element={<Search />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="cart/checkout-success" element={<CheckoutSuccess />} />
+        <Route path=":id" element={<Product />} />
+        <Route path="*" element={<RouteNotFound />} />
+      </Route>
+    </Routes>
   );
 }
 
