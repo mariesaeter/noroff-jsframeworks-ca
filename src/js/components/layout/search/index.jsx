@@ -57,20 +57,22 @@ export function Search() {
         onChange={handleChange}
         placeholder="Type to search"
       />
-      <ul>
+      <ul className="m-t-15">
         {filteredItems.map((product) => (
           <li key={product.id}>
             <Link
               to={`/${product.id}`}
-              className="product-cart m-b-10 display-flex"
+              className="product-cart m-b-10 display-flex justify-content-between"
             >
-              <img
-                className="product-img product-cart-img"
-                src={product.imageUrl}
-                alt={product.title}
-              />
-              <h2 className="product-card-title m-l-10">{product.title}</h2>
-              <div className="product-price">
+              <div className="display-flex">
+                <img
+                  className="product-img product-cart-img"
+                  src={product.imageUrl}
+                  alt={product.title}
+                />
+                <h2 className="product-card-title m-l-10">{product.title}</h2>
+              </div>
+              <div className="product-price m-r-10">
                 <p>{product.price} kr</p>
                 <p>{product.discountedPrice} kr</p>
               </div>

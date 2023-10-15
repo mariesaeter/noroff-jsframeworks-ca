@@ -67,7 +67,7 @@
 
 .product-cart {
   @extend .product-card-general;
-  width: 400px;
+  max-width: 500px;
 
   &-img {
     height: 70px;
@@ -75,6 +75,7 @@
   }
 
   h2 {
-    max-width: 40%;
+    font-size: var(--fs-400);
+    // max-width: 50%;
   }
 }

@@ -29,7 +29,7 @@ export function Cart() {
       <div>
         {cart.map((cartItem) => (
           <div className="display-flex" key={cartItem.product.id}>
-            <div className="product-cart m-b-10 display-flex">
+            <div className="product-cart m-b-10 display-flex justify-content-between">
               <Link to={cartItem.id} className="display-flex">
                 <img
                   className="product-img product-cart-img"
@@ -40,19 +40,23 @@ export function Cart() {
                   {cartItem.product.title}
                 </h2>
               </Link>
+              <div className="display-flex">
+                <div className="p-5 ">{cartItem.quantity}</div>
+                <div>
+                  <button className="icon-button">
+                    <img src="/icons/plus.png" alt="add item" />
+                  </button>
+                  <button className="icon-button">
+                    <img src="/icons/minus.png" alt="subtract item" />
+                  </button>
+                </div>
 
-              <div className="p-10 ">{cartItem.quantity}</div>
-              <div>
-                <button className="icon-button">
-                  <img src="/icons/plus.png" alt="add item" />
-                </button>
-                <button className="icon-button">
-                  <img src="/icons/minus.png" alt="subtract item" />
-                </button>
-              </div>
-              <div className="product-price">
-                <p>{cartItem.product.price * cartItem.quantity} kr</p>
-                <p>{cartItem.product.discountedPrice * cartItem.quantity} kr</p>
+                <div className="product-price m-l-15 m-r-10">
+                  <p>{cartItem.product.price * cartItem.quantity} kr</p>
+                  <p>
+                    {cartItem.product.discountedPrice * cartItem.quantity} kr
+                  </p>
+                </div>
               </div>
             </div>
           </div>

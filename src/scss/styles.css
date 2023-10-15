@@ -407,7 +407,7 @@ header {
 }
 
 .product-cart {
-  width: 400px;
+  max-width: 500px;
 }
 
 .product-cart-img {
@@ -416,7 +416,7 @@ header {
 }
 
 .product-cart h2 {
-  max-width: 40%;
+  font-size: var(--fs-400);
 }
 
 .display-flex {
@@ -535,7 +535,7 @@ header {
 }
 
 .product-cart {
-  width: 400px;
+  max-width: 500px;
 }
 
 .product-cart-img {
@@ -544,7 +544,7 @@ header {
 }
 
 .product-cart h2 {
-  max-width: 40%;
+  font-size: var(--fs-400);
 }
 
 .review-username {
@@ -768,7 +768,7 @@ button:hover {
 }
 
 .product-cart {
-  width: 400px;
+  max-width: 500px;
 }
 
 .product-cart-img {
@@ -777,7 +777,7 @@ button:hover {
 }
 
 .product-cart h2 {
-  max-width: 40%;
+  font-size: var(--fs-400);
 }
 
 form {
