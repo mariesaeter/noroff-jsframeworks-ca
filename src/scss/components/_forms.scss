@@ -1,0 +1,17 @@
+@import "./product-card";
+
+form {
+  margin: 20px 0;
+}
+input {
+  @extend .product-card-general;
+  height: 38px;
+  max-width: 500px;
+  padding-left: 10px;
+  border: solid 1px #fff;
+
+  &:focus {
+    border: solid 2px getColor(primary-yellow);
+    outline: none;
+  }
+}

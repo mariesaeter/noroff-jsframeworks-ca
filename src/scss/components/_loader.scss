@@ -1,0 +1,24 @@
+.loader {
+  margin-top: 30px;
+  .dot {
+    animation: jumping 1s linear infinite;
+
+    &:nth-child(2) {
+      animation-delay: -0.8s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.6s;
+    }
+  }
+}
+
+@keyframes jumping {
+  0%,
+  60%,
+  100% {
+    transform: initial;
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+}

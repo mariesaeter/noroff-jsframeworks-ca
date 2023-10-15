@@ -1,0 +1,11 @@
+@import "./product-card";
+
+.review {
+  @extend .product-card-general;
+  &-username {
+    font-weight: 700;
+  }
+  &-description {
+    color: getColor(gray-text);
+  }
+}

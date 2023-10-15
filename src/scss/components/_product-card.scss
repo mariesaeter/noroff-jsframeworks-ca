@@ -1,0 +1,81 @@
+@import "../utilities/";
+
+// THe first classes are for use on product card home page, card for search result and card for cart
+.product-card-general {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.product-card-title {
+  font-size: var(--fs-400);
+  font-weight: 500;
+}
+
+.product-price {
+  p:nth-child(1) {
+    color: getColor(gray-text);
+    text-decoration: line-through;
+  }
+  &-percentage {
+    color: getColor(secondary-blue);
+    font-style: italic;
+  }
+}
+
+.product-rating {
+  img {
+    width: 15px;
+  }
+}
+
+.products-container {
+  @extend .display-grid;
+  gap: 10px 10px;
+}
+
+.product-card {
+  @extend .product-card-general;
+  text-align: center;
+
+  &-img {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  &-img-container {
+    max-height: 150px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    overflow: hidden;
+    .product-button {
+      opacity: 1;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}
+
+.product-page .product-img {
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.product-cart {
+  @extend .product-card-general;
+  max-width: 500px;
+
+  &-img {
+    height: 70px;
+    width: 70px;
+  }
+
+  h2 {
+    font-size: var(--fs-300);
+    // max-width: 50%;
+  }
+}
